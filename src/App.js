@@ -22,6 +22,7 @@ function App() {
       const result = await response.json();
       localStorage.setItem('access_token', result.token);
       setAuthenticated(true);
+      alert(result.message); // Display welcome message
     } catch (error) {
       alert(error.message || 'Login failed!');
     }
